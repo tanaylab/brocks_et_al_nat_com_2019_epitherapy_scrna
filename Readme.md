@@ -1,0 +1,36 @@
+5' single-cell RNA analysis of cancer cell lines treated with DNMT and HDAC inhibitors
+======================================================================================
+
+This repository holds the code that produced the figures presented in [Brocks et al, 2019](https://www.biorxiv.org/content/early/2018/11/06/462853).
+
+The core analysis is done with the [metacell](https://tanaylab.bitbucket.io/metacell-r/index.html) R package.
+
+#### Quick Links
+
+-   Metacell paper: Baran et al. 2018 ([bioarxiv](https://www.biorxiv.org/content/early/2018/10/08/437665)).
+-   Metacell R package [homepage](https://tanaylab.bitbucket.io/metacell-r/index.html) (with functions reference and usage vignettes).
+-   Raw and processed data is available under GEO accession GSE121309.
+-   Raw UMI counts for all cells and metacell objects: [Brocks2019.tar](http://www.wisdom.weizmann.ac.il/~davidbr/Brocks2019/Brocks_et_al_2019_data.tar).
+
+#### Requirements
+
+R with these packages:
+
+-   ape
+-   Matrix
+-   pheatmap
+-   tidyverse
+-   plyranges
+-   GenomicAlignments
+-   Biostrings
+-   cowplot
+-   RSamtools
+-   data.table
+-   [metacell](https://tanaylab.bitbucket.io/metacell-r/index.html)
+-   and more (see utilities script)
+
+**Note**: Metacell is implemented in R and C++. In particular it uses the Tanay group tgstat library that utilizes shared memory and distributed computing (as well as some specific optional CPU features). The package is tested on linux and macbooks, and is currently not compatible on Windows. A typical application of metacell requires at least 16G RAM. For the current dataset we recommend a dual CPU multi-core workstation with 128GM RAM or more.
+
+#### Contact
+
+For help, please contact <david.brocks@weizmann.ac.il>
